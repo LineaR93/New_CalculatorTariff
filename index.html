@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Sitter Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Benvenuti al servizio Pet Sitter</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservations.html">Prenotazioni</a></li>
+                <li><a href="appointments.html">Appuntamenti</a></li>
+                <li><a href="statistics.html">Statistiche</a></li>
+                <li><a href="settings.html">Impostazioni</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Calcolatore Tariffe Animali</h2>
+            <form id="tariffCalculatorForm">
+                <label for="arrivo">Data e Ora di Arrivo:</label>
+                <input type="datetime-local" id="arrivo" name="arrivo" required>
+                <label for="partenza">Data e Ora di Partenza:</label>
+                <input type="datetime-local" id="partenza" name="partenza" required>
+                <label for="numCani">Numero di Cani:</label>
+                <input type="number" id="numCani" name="numCani" min="0" value="0" required>
+                <label for="numGatti">Numero di Gatti:</label>
+                <input type="number" id="numGatti" name="numGatti" min="0" value="0" required>
+                <button type="submit">Calcola Costo</button>
+            </form>
+            <p id="calculatedCost"></p>
+        </section>
+        <section>
+            <h2>Prossimo Appuntamento</h2>
+            <p id="nextAppointment"></p>
+            <a href="appointments.html">Aggiungi Nuovo Appuntamento</a>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
