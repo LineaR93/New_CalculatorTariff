@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Prenotazioni</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Gestione Prenotazioni</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservations.html">Prenotazioni</a></li>
+                <li><a href="appointments.html">Appuntamenti</a></li>
+                <li><a href="statistics.html">Statistiche</a></li>
+                <li><a href="settings.html">Impostazioni</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Nuova Prenotazione</h2>
+            <form id="prenotazioneForm">
+                <label for="cliente">Nome Cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+                <label for="animale">Nome Animale:</label>
+                <input type="text" id="animale" name="animale" required>
+                <label for="tipo">Tipo Animale:</label>
+                <select id="tipo" name="tipo">
+                    <option value="cane">Cane</option>
+                    <option value="gatto">Gatto</option>
+                </select>
+                <label for="arrivo">Data e Ora di Arrivo:</label>
+                <input type="datetime-local" id="arrivo" name="arrivo" required>
+                <label for="partenza">Data e Ora di Partenza:</label>
+                <input type="datetime-local" id="partenza" name="partenza" required>
+                <label for="note">Note:</label>
+                <textarea id="note" name="note"></textarea>
+                <button type="submit">Aggiungi Prenotazione</button>
+            </form>
+        </section>
+        <section>
+            <h2>Prenotazioni Ricevute</h2>
+            <table id="listaPrenotazioni">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Animale</th>
+                        <th>Tipo</th>
+                        <th>Arrivo</th>
+                        <th>Patenza</th>
+                        <th>Note</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
